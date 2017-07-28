@@ -1,4 +1,5 @@
 import express from 'express'
+import mongoose from 'mongoose'
 const routes = express()
 
 // Controllers 
@@ -13,5 +14,6 @@ routes.post('/removeclient/:id', clientCtlr.removeClient)
 routes.patch('/updateclient/:id', clientCtlr.updateInfo)
 
 // User routes
-
+routes.post('/adduser',userCtlr.userAdd)
+  
 export default routes

@@ -7,7 +7,7 @@ import cors from 'cors'
 import config from './config/database'
 import routes from './routes/routes'
 
-// resolves mongoose promise warning mesage
+// resolves mongoose promise warning message
 mongoose.Promise = global.Promise
 mongoose.connect(config.database, (err) => {
   if(err) {

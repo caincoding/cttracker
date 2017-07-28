@@ -1,6 +1,5 @@
 import bcrypt from 'bcryptjs'
 
-
 module.exports = {
   getUserById: (id, callback) => {
     User.findById(id,callback)
@@ -31,5 +30,6 @@ module.exports = {
         }
         callback(null,doesMatch)
     })
-  }
+  },
+  
 }

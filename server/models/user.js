@@ -18,6 +18,11 @@ const userSchema = new Schema ({
     required: true,
     minLength: [3, 'Last name needs to be atleast 3 characters in length fucker']
   },
+  password: {
+    type: String,
+    required: true,
+    minLength: [8, 'Password needs to be atleast 8 characters in length fucker']
+  },
   created_At:{
     type: Date,
     default: Date.now
