@@ -1,7 +1,7 @@
-import testCtlr from './testCtlr'
+import userCtlr from './userCtlr'
 import clientCtlr from './clientCtlr'
 
 export default {
-  testCtlr,
+  userCtlr,
   clientCtlr
 }

@@ -1,9 +1,8 @@
 import Client from './../models/client'
+
 const clientCtlr = {}
 
-
-
-// client GET request
+// Client GET request
 clientCtlr.getAll = ( req, res )=> {
   Client.find(( err, client)=>{
     if(err){
@@ -27,6 +26,7 @@ clientCtlr.getOne = ( req, res )=> {
    }
  })
 }
+
 // client POST request
 clientCtlr.addClient = ( req, res )=> {
   let newClient = new Client({

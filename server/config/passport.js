@@ -1,7 +1,8 @@
-const jwtStrategy = require('passport-jwt').jwtStrategy
-const extractJwt = require('passport-jwt').ExtractJwt
 import User from './../models/user'
 import config from './database'
+
+const jwtStrategy = require('passport-jwt').jwtStrategy
+const extractJwt = require('passport-jwt').ExtractJwt
 
 module.exports = () => {
   let opts = {}

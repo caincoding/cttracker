@@ -19,9 +19,8 @@ const userSchema = new Schema ({
     minLength: [3, 'Last name needs to be atleast 3 characters in length fucker']
   },
   created_At:{
-    type: { date,
-    default: date.Now
-    }
+    type: Date,
+    default: Date.now
   }
 })
 
