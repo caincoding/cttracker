@@ -33,7 +33,6 @@ const clientSchema = new Schema ({
   }
 })
 
-// toDO: some encryption shit
 
 const Client = mongoose.model('Client', clientSchema)
 export default Client

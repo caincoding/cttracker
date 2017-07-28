@@ -3,8 +3,10 @@ import mongoose from 'mongoose'
 import bodyParser from 'body-parser'
 import cors from 'cors'
 
+
 import config from './config/database'
 import routes from './routes/routes'
+
 mongoose.Promise = global.Promise
 mongoose.connect(config.database, (err) => {
   if(err) {
