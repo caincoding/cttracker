@@ -1,4 +1,3 @@
-import passport from 'passport'
 import jwt from 'jsonwebtoken'
 
 import User from './../models/user'
