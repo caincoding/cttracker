@@ -1,5 +1,5 @@
 import jwt from 'jsonwebtoken'
-
+import passport from 'passport'
 import User from './../models/user'
 import userHelper from './../helpers/userHelpers'
 import config from './../config/database'
@@ -56,7 +56,7 @@ userCtlr.authenticate = ( req, res ) => {
         })
 
         res.json({
-          Token: 'JWT '+ token,
+          token: 'JWT '+ token,
           user: {
             id: user._id,
             userName: user.userName

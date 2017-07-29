@@ -1,4 +1,5 @@
 import Client from './../models/client'
+import passport from 'passport'
 
 const clientCtlr = {}
 
