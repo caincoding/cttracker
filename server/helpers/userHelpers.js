@@ -1,11 +1,12 @@
 import bcrypt from 'bcryptjs'
+import User from './../models/user'
 
 module.exports = {
   getUserById: (id, callback) => {
     User.findById(id,callback)
   },  
-  getUserByUserName: () => {
-    const query = {username: username}
+  getUserByUsername: (userName, callback) => {
+    const query = {userName: userName}
     User.findOne(query, callback)
   },
   addUser: (newUser, callback) => {

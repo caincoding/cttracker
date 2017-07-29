@@ -1,5 +1,6 @@
 import express from 'express'
 import mongoose from 'mongoose'
+
 const routes = express()
 
 // Controllers 
@@ -15,5 +16,6 @@ routes.patch('/updateclient/:id', clientCtlr.updateInfo)
 
 // User routes
 routes.post('/adduser',userCtlr.userAdd)
+routes.post('/authenticate', userCtlr.authenticate)
   
 export default routes
