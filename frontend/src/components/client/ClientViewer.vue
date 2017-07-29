@@ -6,7 +6,6 @@
         <li>{{ client.lastName }}</li>
         <li>{{ client.clientPhone }}</li>
         <li>{{ client.clientNotes[0] }}</li>
-        <li>{{ client.firstName }}</li>
       </ul>
     </div>
     

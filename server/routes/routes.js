@@ -11,7 +11,7 @@ import userCtlr from './../controllers/userCtlr'
 
 // Client routes
 routes.get('/clients', passport.authenticate('jwt', {session: false}) , clientCtlr.getAll)
-routes.get('/client/:id', clientCtlr.getOne)
+routes.get('/client/:id',  passport.authenticate('jwt', {session: false}) , clientCtlr.getOne)
 routes.post('/addclient', passport.authenticate('jwt', {session: false}), clientCtlr.addClient)
 routes.post('/removeclient/:id', clientCtlr.removeClient)
 routes.patch('/updateclient/:id', clientCtlr.updateInfo)
