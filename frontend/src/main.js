@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import VueResourece from 'vue-resource'
 import VueMaterial from 'vue-material'
 
 // imports needed for vue-material to work correctly
@@ -12,6 +13,7 @@ import 'vue-material/dist/vue-material.js'
 Vue.config.productionTip = false
 
 Vue.use(VueMaterial)
+Vue.use(VueResourece)
 
 // set default vue-material theme
 Vue.material.registerTheme('default', {
@@ -19,7 +21,10 @@ Vue.material.registerTheme('default', {
     color: 'blue',
     hue: '700'
   },
-  accent: 'red',
+  accent: {
+    color: 'blue',
+    hue: '900'
+  },
   warn: 'red',
   background: 'grey'
 })
