@@ -18,15 +18,18 @@ Vue.use(VueResourece)
 // set default vue-material theme
 Vue.material.registerTheme('default', {
   primary: {
-    color: 'blue',
+    color: 'teal',
     hue: '700'
   },
   accent: {
-    color: 'blue',
-    hue: '900'
+    color: 'deep-orange',
+    hue: '300'
   },
   warn: 'red',
-  background: 'grey'
+  background: {
+    color: 'grey',
+    hue: '900'
+  }
 })
 
 /* eslint-disable no-new */
