@@ -25,11 +25,12 @@ export default {
   name: 'hello',
   data () {
     return {
-      clients: []
+      clients: [],
+      token: localStorage.getItem('token')
     }
   },
   created: function () {
-    this.$http.get('http://localhost:3000/clients')
+    this.$http.get('http://localhost:3000/clients', {headers: {Authorization: this.token}})
       .then(response => {
         this.clients = response.body
         console.log(response.body)

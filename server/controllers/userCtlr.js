@@ -57,10 +57,7 @@ userCtlr.authenticate = ( req, res ) => {
 
         res.json({
           token: 'JWT '+ token,
-          user: {
-            id: user._id,
-            userName: user.userName
-          }
+          
         })
       } else {
         return res.json({

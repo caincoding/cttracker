@@ -39,6 +39,12 @@ export default {
       userLogin: {
         username: '',
         password: ''
+      },
+      get token () {
+        return localStorage.getItem('token') || 0
+      },
+      set token (value) {
+        localStorage.setItem('token', value)
       }
     }
   },
@@ -46,7 +52,8 @@ export default {
     fuckingWork () {
       this.$http.post('http://localhost:3000/authenticate', {userName: this.userLogin.username, password: this.userLogin.password})
       .then(response => {
-        return transition.redirect('/test')
+        this.token = response.body.token
+        this.$router.push('/test')
       })
     }
   }
