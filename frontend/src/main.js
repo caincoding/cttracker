@@ -18,8 +18,8 @@ Vue.use(VueResourece)
 // set default vue-material theme
 Vue.material.registerTheme('default', {
   primary: {
-    color: 'teal',
-    hue: '700'
+    color: 'red',
+    hue: 'A700'
   },
   accent: {
     color: 'deep-orange',
@@ -28,7 +28,7 @@ Vue.material.registerTheme('default', {
   warn: 'red',
   background: {
     color: 'grey',
-    hue: '900'
+    hue: '200'
   }
 })
 
