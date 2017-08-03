@@ -11,12 +11,12 @@
         <form novalidate @submit.stop.prevent="submit">
           <md-input-container md-clearable>
             <label>Username</label>
-            <md-input required :value="userLogin.username"></md-input>
+            <md-input required :value="userLogin.username" v-model="userLogin.username"></md-input>
           </md-input-container>
 
           <md-input-container md-has-password>
             <label>Password</label>
-            <md-input type="password" required :value="userLogin.password"></md-input>
+            <md-input type="password" required :value="userLogin.password" v-model="userLogin.password"></md-input>
           </md-input-container>
         </form>
       </md-card-content>
@@ -43,8 +43,11 @@ export default {
     }
   },
   methods: {
-    fuckingWork: () => {
-      console.log(this.userLogin.username)
+    fuckingWork () {
+      this.$http.post('http://localhost:3000/authenticate', {userName: this.userLogin.username, password: this.userLogin.password})
+      .then(response => {
+        return transition.redirect('/test')
+      })
     }
   }
 }
